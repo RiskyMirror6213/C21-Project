@@ -32,14 +32,13 @@ function draw() {
   */
  if(bullet.isTouching(wall)){
    bullet.velocityX = 0;
-   bullet.x = wall.x - thickness;
    damage = (0.5*weight*speed*speed)/(thickness*thickness*thickness)
- }
   if(damage > 10){
     wall.shapeColor = "red"
   }
   if(damage <= 10){
     wall.shapeColor = "green"
   }
+ }
   drawSprites();
 }
